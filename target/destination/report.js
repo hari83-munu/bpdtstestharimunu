@@ -33,21 +33,21 @@ formatter.match({
   "location": "BpdtsApiTests.i_am_an_API_user()"
 });
 formatter.result({
-  "duration": 79227550,
+  "duration": 196286973,
   "status": "passed"
 });
 formatter.match({
   "location": "BpdtsApiTests.i_access_city_enpoint_with_London()"
 });
 formatter.result({
-  "duration": 20674,
+  "duration": 42003,
   "status": "passed"
 });
 formatter.match({
   "location": "BpdtsApiTests.i_see_response_as()"
 });
 formatter.result({
-  "duration": 986432928,
+  "duration": 1910756545,
   "status": "passed"
 });
 formatter.scenario({
@@ -77,21 +77,21 @@ formatter.match({
   "location": "BpdtsApiTests.i_am_an_API_user()"
 });
 formatter.result({
-  "duration": 27700,
+  "duration": 104772,
   "status": "passed"
 });
 formatter.match({
   "location": "BpdtsApiTests.i_access_instructions_enpoint()"
 });
 formatter.result({
-  "duration": 20773,
+  "duration": 34909,
   "status": "passed"
 });
 formatter.match({
   "location": "BpdtsApiTests.i_see_instructions_response_as()"
 });
 formatter.result({
-  "duration": 54755053,
+  "duration": 79603888,
   "status": "passed"
 });
 formatter.scenario({
@@ -121,21 +121,21 @@ formatter.match({
   "location": "BpdtsApiTests.i_am_an_API_user()"
 });
 formatter.result({
-  "duration": 25344,
+  "duration": 52094,
   "status": "passed"
 });
 formatter.match({
   "location": "BpdtsApiTests.i_access_users_enpoint()"
 });
 formatter.result({
-  "duration": 24482,
+  "duration": 35859,
   "status": "passed"
 });
 formatter.match({
   "location": "BpdtsApiTests.i_see_users_response_as()"
 });
 formatter.result({
-  "duration": 57894620,
+  "duration": 76900488,
   "status": "passed"
 });
 formatter.scenario({
@@ -165,21 +165,65 @@ formatter.match({
   "location": "BpdtsApiTests.i_am_an_API_user()"
 });
 formatter.result({
-  "duration": 55362,
+  "duration": 44589,
   "status": "passed"
 });
 formatter.match({
   "location": "BpdtsApiTests.i_access_users_enpoint_with_userId()"
 });
 formatter.result({
-  "duration": 23614,
+  "duration": 73494756,
   "status": "passed"
 });
 formatter.match({
   "location": "BpdtsApiTests.i_see_users_with_userId_response_as()"
 });
 formatter.result({
-  "duration": 60539655,
+  "duration": 59629200,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 22,
+  "name": "verify get method json response for Users endPoint with userId",
+  "description": "",
+  "id": "bpdts-api-tests;verify-get-method-json-response-for-users-endpoint-with-userid",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 23,
+  "name": "I am an API user",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 24,
+  "name": "I access users enpoint with userId",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 25,
+  "name": "I see users endpoint json response is verified",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "BpdtsApiTests.i_am_an_API_user()"
+});
+formatter.result({
+  "duration": 35750,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BpdtsApiTests.i_access_users_enpoint_with_userId()"
+});
+formatter.result({
+  "duration": 65070871,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BpdtsApiTests.i_see_users_with_userId_jsonResponse_verified()"
+});
+formatter.result({
+  "duration": 705076280,
   "status": "passed"
 });
 });

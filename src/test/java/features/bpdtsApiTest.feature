@@ -18,3 +18,8 @@ Feature: bpdts api tests
     Given I am an API user
     When I access users enpoint with userId
     Then I see users endpoint with user id response succesful
+
+  Scenario: verify get method json response for Users endPoint with userId
+    Given I am an API user
+    When I access users enpoint with userId
+    Then I see users endpoint json response is verified

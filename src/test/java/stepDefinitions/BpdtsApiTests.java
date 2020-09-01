@@ -3,6 +3,9 @@ package stepDefinitions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.ResponseBody;
+import org.junit.Assert;
 
 import static io.restassured.RestAssured.given;
 
@@ -12,6 +15,8 @@ public class BpdtsApiTests {
     public static String instructionsEndpoint = "/instructions";
     public static String usersEndpoint = "/users";
     public static String usersEndpointWithuserId = "/user/1000";
+    public static ResponseBody body;
+    public static JsonPath jsonPathEvaluator;
 
     @Given("^I am an API user$")
     public void i_am_an_API_user() {
@@ -67,8 +72,10 @@ public class BpdtsApiTests {
 
     @When("^I access users enpoint with userId$")
     public void i_access_users_enpoint_with_userId()  {
-        // Write code here that turns the phrase above into concrete actions
-        ;
+
+        body = given().
+                when().
+                get(rootURL+usersEndpointWithuserId).getBody();
     }
 
     @Then("^I see users endpoint with user id response succesful$")
@@ -79,5 +86,26 @@ public class BpdtsApiTests {
                 then().
                 assertThat().statusCode(200)
         ;
+
+
     }
+
+    @Then("^I see users endpoint json response is verified$")
+    public void i_see_users_with_userId_jsonResponse_verified()  {
+
+
+        jsonPathEvaluator = given().
+                when().
+                get(rootURL+usersEndpointWithuserId).getBody().jsonPath();
+
+        System.out.println(jsonPathEvaluator.get("id"));
+
+        Assert.assertEquals(1000,jsonPathEvaluator.get("id"));
+        Assert.assertEquals("Ches",jsonPathEvaluator.get("first_name"));
+        Assert.assertEquals("Ertelt",jsonPathEvaluator.get("last_name"));
+
+//
+
+    }
+
 }
